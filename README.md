@@ -82,6 +82,8 @@ rectOfInterest都是按照横屏来计算的 所以当竖屏的情况下 x轴和
 
 代理方法就可以拿到
 
+![扫描](https://i.niupic.com/images/2016/09/07/2ea1uC.gif)
+
 #### 4、其他的使用场景
 
 除了最常见的扫描识别二维码的方式之外 还有点击弹出框 选择识别图中二维码，或者 长按直接识别二维码的方式
@@ -98,6 +100,8 @@ rectOfInterest都是按照横屏来计算的 所以当竖屏的情况下 x轴和
 		 					 NSError *error))aCompletion;
 
 ```
+![长按识别](https://i.niupic.com/images/2016/09/07/f1hIfp.gif)
+
 
 #### 5、总结
 这样的话在我们日常使用中常见的几种对于二维码的操作，基本可以实现。希望这个demo对你有所帮助。
