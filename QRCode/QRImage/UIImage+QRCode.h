@@ -29,7 +29,9 @@ typedef enum {
  *
  *  @return 包含要生成内容的二维码图片
  */
-+ (UIImage *)qrImageForString:(NSString *)string imageSize:(CGFloat)size Topimg:(UIImage *)topimg;
++ (UIImage *)qrImageForString:(NSString *)string
+                    imageSize:(CGFloat)size
+                       Topimg:(UIImage *)topimg;
 
 /**
  *  生成二维码图片的方法
@@ -42,7 +44,11 @@ typedef enum {
  *
  *  @return 包含要生成内容的二维码图片
  */
-+(UIImage *)qrImageForString:(NSString *)string imageSize:(CGFloat)size withPointType:(QRPointType)pointType withPositionType:(QRPositionType)positionType withColor:(UIColor *)color;
++(UIImage *)qrImageForString:(NSString *)string
+                   imageSize:(CGFloat)size
+               withPointType:(QRPointType)pointType
+            withPositionType:(QRPositionType)positionType
+                   withColor:(UIColor *)color;
 
 /**
  *  生成二维码图片的方法
@@ -54,5 +60,8 @@ typedef enum {
  *
  *  @return 包含要生成内容的二维码图片
  */
-+(UIImage*)qrImageForString:(NSString *)string imageSize:(CGFloat)size Topimg:(UIImage *)topimg withColor:(UIColor*)color;
++(UIImage*)qrImageForString:(NSString *)string
+                  imageSize:(CGFloat)size
+                     Topimg:(UIImage *)topimg
+                  withColor:(UIColor*)color;
 @end

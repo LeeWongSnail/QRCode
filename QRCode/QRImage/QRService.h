@@ -21,7 +21,9 @@
  *  @param imageSize       生成图片的尺寸
  *  @param aCompletion     生成完成的回调
  */
-- (void)createQRImage:(NSString *)aQRSourceString size:(CGFloat)imageSize completion:(void (^)(UIImage *result))aCompletion;
+- (void)createQRImage:(NSString *)aQRSourceString
+                 size:(CGFloat)imageSize
+           completion:(void (^)(UIImage *result))aCompletion;
 
 /**
  *  扫描二维码的方法
@@ -32,7 +34,9 @@
  *
  *  @return 返回扫描的layer 需要使用者添加到需要显示扫描效果的view上
  */
-- (AVCaptureVideoPreviewLayer *)scanQRImage:(CGRect)windowSize viewSize:(CGRect)viewSize result:(void (^)(NSString *aQRCode))scanResult;
+- (AVCaptureVideoPreviewLayer *)scanQRImage:(CGRect)windowSize
+                                   viewSize:(CGRect)viewSize
+                                     result:(void (^)(NSString *aQRCode))scanResult;
 
 /**
  *  识别图中的二维码
@@ -40,6 +44,7 @@
  *  @param aImage      图片
  *  @param aCompletion 识别完成的回调
  */
-- (void)recognitionQRCodeFromImage:(UIImageView *)aImage completion:(void (^)(NSString *result,NSError *error))aCompletion;
+- (void)recognitionQRCodeFromImage:(UIImageView *)aImage
+                        completion:(void (^)(NSString *result,NSError *error))aCompletion;
 
 @end
