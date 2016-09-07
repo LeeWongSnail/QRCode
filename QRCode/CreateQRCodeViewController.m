@@ -40,9 +40,25 @@
     [self.view addSubview:back];
 }
 
+- (void)goBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    self.navigationController.navigationBar.hidden=YES;
+    
+}
+-(void)viewDidDisappear:(BOOL)animated{
+    
+    self.navigationController.navigationBar.hidden=NO;
+    
 }
 
 /*

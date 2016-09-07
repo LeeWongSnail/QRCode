@@ -9,7 +9,7 @@
 #import "QRService.h"
 #import "UIImage+QRCode.h"
 
-@interface QRService () <AVCaptureMetadataOutputObjectsDelegate>
+@interface QRService () <AVCaptureMetadataOutputObjectsDelegate,UIAlertViewDelegate>
 
 //捕获设备，通常是前置摄像头，后置摄像头，麦克风（音频输入）
 @property(nonatomic)AVCaptureDevice *device;
@@ -137,5 +137,12 @@
     }
 
 }
+
+#pragma mark UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
+}
+
 
 @end

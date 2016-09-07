@@ -33,6 +33,21 @@
     [image addGestureRecognizer:longPress];
     image.userInteractionEnabled = YES;
     
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
+    [back setTitle:@"返回" forState:UIControlStateNormal];
+    [back setBackgroundColor:[UIColor redColor]];
+    back.layer.cornerRadius = 5.;
+    [back setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    back.frame = CGRectMake(self.view.center.x-30, SCREEN_H - 100, 60, 30);
+    [back addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:back];
+    [self.view bringSubviewToFront:back];
+    
+}
+
+- (void)goBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark-> 长按识别二维码
